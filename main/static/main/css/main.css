@@ -1,3 +1,17 @@
 body {
-    background: #000;
+
+}
+
+i.fa {
+    font-size: 20px;
+}
+
+.nav-title {
+    color: #bbb;
+}
+
+.nav-line {
+    height: 55px;
+    width: 100%;
+    background: #32373d;
 }
