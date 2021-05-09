@@ -8270,6 +8270,7 @@ h1, h2, h3, h4, h5,
       background: #2f89fc;
       border-color: transparent;
       position: relative;
+      top: -7px;
       color: #000;
       width: 30px;
       height: 30px; }
@@ -8307,7 +8308,7 @@ h1, h2, h3, h4, h5,
     margin-bottom: 10px; }
   .bg-wrap .user-logo h3 {
     color: #fff;
-    font-size: 18px; }
+    font-size: 18px;}
 
 a[data-toggle="collapse"] {
   position: relative; }

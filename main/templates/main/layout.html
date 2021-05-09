@@ -24,36 +24,40 @@
         </div>
         <div class="img bg-wrap text-center py-4" style="background-image:  url({% static 'main/images/car.jpg' %});">
             <div class="user-logo">
-                <div class="img" style="background-image: url({% static 'main/images/me.jpg' %});"></div>
+                <div class="img user-img" style="background-image: url({% static 'main/images/me.jpg' %});"></div>
                 <h3>Иван Иванов</h3>
+                <h6 class="role-title">Ученик</h6>
             </div>
         </div>
         <h3 class="nav-title ml-4 mt-3">Навигация</h3>
         <ul class="list-unstyled components mb-5">
             <li class="active">
-                <a href="#"><i class="fa fa-home mr-3"></i> Главная</a>
+                <a href="{% url 'home' %}"><i class="fa fa-home mr-3"></i> Главная</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-calendar mr-3 notif"></i> Расписание</a>
+                <a href="{% url 'schedule' %}"><i class="fa fa-calendar mr-3 notif"></i> Расписание</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-calendar mr-3 notif"></i> Теоретическиий курс</a>
+                <a href="/theory"><i class="fa fa-calendar mr-3 notif"></i> Теоретическиий курс</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-gift mr-3"></i> История вождений</a>
+                <a href="/history"><i class="fa fa-gift mr-3"></i> История вождений</a>
             </li>
 
             <li>
                 <a href="#"><i class="fa fa-sign-out mr-3"></i> Выйти</a>
             </li>
         </ul>
+        <img class="logo-school" src="{% static 'main/images/logo.png' %}" alt="logo">
+
+
 
     </nav>
 
     <!-- Page Content  -->
     <div id="content">
         <div class="nav-line"></div>
-        <div class="content p-4 p-md-5 pt-5">
+        <div class="content-main">
             {% block content %}
             {% endblock %}
         </div>

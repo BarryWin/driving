@@ -1,9 +1,27 @@
 {% extends 'main/layout.html' %}
 
+{% load static %}
+
 {% block title %} Личный кабинет {% endblock %}
 
 {% block content %}
-    {% include 'main/header.html' %}
-    <h1>Личный кабинет</h1>
+    <h2 class="page-title">Личный кабинет</h2>
+    <div class="greetings">
+            <img class="wheel" src="{% static 'main/images/wheel.png' %}" alt="">
+            <div class="text-block">
+                <p class="greetings-text">Здравствуйте, <b>Иван Иванович!</b></p>
+                <p class="greetings-text">Это ваш личный кабинет в автошколе <b>"Автошкола 29"</b></p>
+                <p class="greetings-text">Ваша группа <b>"32512"</b>, направление подготовки <b>"B"</b></p>
+                <p class="greetings-text">Адрес учбного класса: г. Северодвинск, ул. Тестовая, д 7</p>
+                <p class="greetings-text">Телефон автошколы: <b>+79112221122</b></p>
+            </div>
+    </div>
+    <div class="personal-info">
+        <h5>Личная информация</h5>
+        <p>ФИО: <span>Иван Иванов Иванович</span></p>
+        <p>Адрес проживания: <span>ул. Орджоникидзе 30, кв. 26</span></p>
+        <p>Электронная почта: <span>slavavlasov@yandex.ru</span></p>
+        <p>Электронная почта: <span>slavavlasov@yandex.ru</span></p>
+    </div>
     <p>Личный кабинет</p>
 {% endblock %}
