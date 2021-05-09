@@ -1,5 +1,5 @@
 body {
-
+    background-color: #F7F7F7;
 }
 
 i.fa {
@@ -14,4 +14,62 @@ i.fa {
     height: 55px;
     width: 100%;
     background: #32373d;
+}
+
+.logo-school {
+    max-width: 240px;
+    display: flex;
+    margin: auto;
+}
+
+.user-img {
+    box-shadow: 0 0 15px 5px #000;
+}
+
+h3 {
+    margin-bottom: 0 !important;
+}
+
+h6.role-title {
+    display: block;
+    font-size: 15px;
+    margin: auto;
+    padding: 0;
+    color: #F8CB33;
+    max-width: 90px;
+    box-shadow: 0 0 15px 5px #555;
+    background-color: rgba(50, 55, 61, 0.7);
+    border-radius: 5px;
+}
+
+.content-main {
+    min-height: calc(100% - 65px);
+    flex-shrink: 2;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgb(0 0 0 / 20%)
+}
+
+.greetings {
+    display: flex;
+}
+
+.wheel {
+    height: 110px;
+    margin-right: 20px;
+}
+
+.greetings-text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6em;
+}
+
+h2.page-title {
+    background-color: #32c5d2;
+    box-shadow: 0 0 15px 1px #26a1ab inset;
+    color: #fff;
+    padding-left: 10px;
+    margin-bottom: 20px;
 }
