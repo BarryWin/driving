@@ -9,4 +9,7 @@ def index(request):
 def schedule(request):
     return render(request, 'main/schedule.html')
 
+def tests(request):
+    return render(request, 'main/tests.html')
+
 # Create your views here.

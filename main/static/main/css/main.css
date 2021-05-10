@@ -67,9 +67,26 @@ h6.role-title {
 }
 
 h2.page-title {
-    background-color: #32c5d2;
+    background-color: #2eb8c4;
     box-shadow: 0 0 15px 1px #26a1ab inset;
     color: #fff;
     padding-left: 10px;
     margin-bottom: 20px;
+}
+
+.account {
+    display: flex;
+    justify-content: space-between;
+}
+
+.personal-info {
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px #aaa;
+    padding: 10px 50px 10px 10px;
+    margin-right: 20px;
+}
+
+.pdd-tickets {
+
 }

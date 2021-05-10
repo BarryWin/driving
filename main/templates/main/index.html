@@ -6,7 +6,8 @@
 
 {% block content %}
     <h2 class="page-title">Личный кабинет</h2>
-    <div class="greetings">
+    <div class="account">
+        <div class="greetings">
             <img class="wheel" src="{% static 'main/images/wheel.png' %}" alt="">
             <div class="text-block">
                 <p class="greetings-text">Здравствуйте, <b>Иван Иванович!</b></p>
@@ -15,13 +16,27 @@
                 <p class="greetings-text">Адрес учбного класса: г. Северодвинск, ул. Тестовая, д 7</p>
                 <p class="greetings-text">Телефон автошколы: <b>+79112221122</b></p>
             </div>
+        </div>
+        <div class="personal-info">
+            <h5>Личная информация</h5>
+            <p class="greetings-text"><b>ФИО: </b><span>Иванов Иван Иванович</span></p>
+            <p class="greetings-text"><b>Адрес проживания: </b><span>ул. Орджоникидзе 30, кв. 26</span></p>
+            <p class="greetings-text"><b>Электронная почта: </b><span>slavavlasov@yandex.ru</span></p>
+            <p class="greetings-text"><b>Номер телефона: </b><span>+79115045117</span></p>
+        </div>
     </div>
-    <div class="personal-info">
-        <h5>Личная информация</h5>
-        <p>ФИО: <span>Иван Иванов Иванович</span></p>
-        <p>Адрес проживания: <span>ул. Орджоникидзе 30, кв. 26</span></p>
-        <p>Электронная почта: <span>slavavlasov@yandex.ru</span></p>
-        <p>Электронная почта: <span>slavavlasov@yandex.ru</span></p>
+    <div class="personal-docs">
+        <div class="dogovor">
+            <h5>Договор</h5>
+        </div>
+        <div class="med">
+            <h5>Медицинская справка</h5>
+        </div>
+        <div class="receipt">
+            <h5>Квитанция</h5>
+        </div>
     </div>
-    <p>Личный кабинет</p>
+
+
+
 {% endblock %}
