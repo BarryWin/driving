@@ -1,0 +1,39 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %} Расписание {% endblock %}
+
+{% block content %}
+
+    <h2 class="page-title">История вождений</h2>
+
+    <table id="next-lessons" class="display">
+        <tbody>
+        <tr>
+            <th>Дата</th>
+            <th>Время</th>
+            <th>Часы</th>
+            <th>Вид занятия</th>
+            <th>Тема</th>
+        </tr>
+        <tr>
+            <td>25.05.2021</td>
+            <td>17:00 - 18:30</td>
+            <td>-1.5</td>
+            <td>Практическое занятие</td>
+            <td>Автодром</td>
+        </tr>
+        <tr>
+        <tr>
+            <td>27.05.2021</td>
+            <td>19:30 - 21:00</td>
+            <td>-1.5</td>
+            <td>Практическое занятие</td>
+            <td>Езда по городу</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+{% endblock %}
