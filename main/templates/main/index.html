@@ -29,6 +29,7 @@
     <div class="personal-docs">
         <h5>Ваши документы:</h5>
         <h5 class="bg-danger text-white pl-1">У вас сданы не все документы</h5>
+        <h5 class="bg-success text-white pl-1 d-none">Все документы сданы</h5>
         <table id="documents" class="display">
             <tbody>
             <tr>
@@ -58,15 +59,19 @@
             </tr>
             </tbody>
         </table>
-        <div class="dogovor">
-            <h5>Договор</h5>
+        <div class="study-items">
+            <div class="instructor shadow">
+                <img class="instructor-image" src="{% static 'main/images/dizel.jpg' %}" alt="instructor">
+                <div class="instructor-info">
+                    <p class="instructor-name">Костылев Никита Сергеевич</p>
+                    <p class="instructor-phone">Тел: <span class="phone-num">+79115551525</span></p>
+                    <p class="item-title">Ваш инструктор</p>
+                </div>
 
-        </div>
-        <div class="med">
-            <h5>Медицинская справка</h5>
-        </div>
-        <div class="receipt">
-            <h5>Квитанция</h5>
+            </div>
+            <div class="car">
+                <div class="car-name">Renault Logan</div>
+            </div>
         </div>
     </div>
 

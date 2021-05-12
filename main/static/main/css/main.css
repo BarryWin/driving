@@ -88,9 +88,48 @@ h2.page-title {
 }
 
 .personal-docs {
-
+    margin-top: 20px;
 }
 
-.pdd-tickets {
+.study-items {
+    display: flex;
+    margin-top: 30px;
+}
 
+.instructor {
+    display: flex;
+    justify-content: space-between;
+    height: 95px;
+    background-color: #32c5d2;
+    color: #FFF;
+    text-align: right;
+    min-width: 500px;
+}
+
+.shadow {
+    box-shadow: 0 0 8px rgb(0 0 0 / 20%);
+    border-radius: 2px;
+}
+
+.instructor-image {
+    height: 95px;
+}
+
+.instructor-info {
+    padding-top: 2px;
+    padding-right: 7px;
+}
+
+.instructor-phone {
+    font-size: 15px;
+    margin: 0;
+}
+
+.instructor-name {
+    font-size: 18px;
+    margin: 0;
+}
+
+.car {
+    height: 95px;
 }
