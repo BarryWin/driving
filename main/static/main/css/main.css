@@ -116,18 +116,30 @@ h2.page-title {
 }
 
 .instructor-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding-top: 2px;
-    padding-right: 7px;
+    width: 100%;
 }
 
 .instructor-phone {
     font-size: 15px;
     margin: 0;
+    margin-bottom: 10px;
+    padding-right: 7px;
 }
 
 .instructor-name {
     font-size: 18px;
     margin: 0;
+    padding-right: 7px;
+}
+
+.item-title {
+    background-color: rgba(0, 0, 0, .05);
+    margin: 0;
+    padding-right: 7px;
 }
 
 .car {
