@@ -25,3 +25,7 @@ $(document).ready( function () {
 $(document).ready( function () {
     $('#documents').DataTable();
 } );
+
+$(document).ready( function () {
+    $('#next-lessons').DataTable();
+} );

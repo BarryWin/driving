@@ -82,7 +82,7 @@ h2.page-title {
 .personal-info {
     border: 2px solid #aaa;
     border-radius: 10px;
-    box-shadow: 0 0 10px 2px #aaa;
+    box-shadow: 0 0 15px 0 #aaa;
     padding: 10px 50px 10px 10px;
     margin-right: 20px;
 }
@@ -111,11 +111,11 @@ h2.page-title {
     border-radius: 2px;
 }
 
-.instructor-image {
+.item-image {
     height: 95px;
 }
 
-.instructor-info {
+.item-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -123,14 +123,14 @@ h2.page-title {
     width: 100%;
 }
 
-.instructor-phone {
+.item-phone {
     font-size: 15px;
     margin: 0;
     margin-bottom: 10px;
     padding-right: 7px;
 }
 
-.instructor-name {
+.item-name {
     font-size: 18px;
     margin: 0;
     padding-right: 7px;
@@ -143,5 +143,16 @@ h2.page-title {
 }
 
 .car {
+    display: flex;
+    justify-content: space-between;
     height: 95px;
+    background-color: #32c5d2;
+    color: #FFF;
+    text-align: right;
+    min-width: 500px;
+    margin-left: 15px;
+}
+
+.next-lessons {
+    margin-top: 20px;
 }

@@ -13,7 +13,7 @@
                 <p class="greetings-text">Здравствуйте, <b>Иван Иванович!</b></p>
                 <p class="greetings-text">Это ваш личный кабинет в автошколе <b>"Автошкола 29"</b></p>
                 <p class="greetings-text">Ваша группа <b>"32512"</b>, направление подготовки <b>"B"</b></p>
-                <p class="greetings-text">Адрес учбного класса: г. Северодвинск, ул. Тестовая, д 7</p>
+                <p class="greetings-text">Адрес учбного класса: г. Северодвинск, ул. Какая-то, д 7</p>
                 <p class="greetings-text">Телефон автошколы: <b>+79112221122</b></p>
             </div>
         </div>
@@ -22,7 +22,7 @@
             <p class="greetings-text"><b>ФИО: </b><span>Иванов Иван Иванович</span></p>
             <p class="greetings-text"><b>Дата рождения: </b><span>31.10.1999</span></p>
             <p class="greetings-text"><b>Адрес проживания: </b><span>ул. Орджоникидзе 30, кв. 26</span></p>
-            <p class="greetings-text"><b>Электронная почта: </b><span>slavavlasov@yandex.ru</span></p>
+            <p class="greetings-text"><b>Электронная почта: </b><span>ivanivanov@yandex.ru</span></p>
             <p class="greetings-text"><b>Номер телефона: </b><span>+79115045117</span></p>
         </div>
     </div>
@@ -61,18 +61,51 @@
         </table>
         <div class="study-items">
             <div class="instructor shadow">
-                <img class="instructor-image" src="{% static 'main/images/dizel.jpg' %}" alt="instructor">
-                <div class="instructor-info">
-                    <p class="instructor-name">Костылев Никита Сергеевич</p>
-                    <p class="instructor-phone">Тел: <span class="phone-num">+79115551525</span></p>
+                <img class="item-image" src="{% static 'main/images/dizel.jpg' %}" alt="instructor">
+                <div class="item-info">
+                    <p class="item-name">Костылев Никита Сергеевич</p>
+                    <p class="item-phone">Тел: <span class="phone-num">+79115551525</span></p>
                     <p class="item-title">Ваш инструктор</p>
                 </div>
 
             </div>
-            <div class="car">
-                <div class="car-name">Renault Logan</div>
+            <div class="car shadow">
+                <img class="item-image" src="{% static 'main/images/cars/renault.jpg' %}" alt="car">
+                <div class="item-info">
+                    <p class="item-name">Renault Logan</p>
+                    <p class="item-phone">Номер: <span class="phone-num">М317КА 29</span></p>
+                    <p class="item-title">Ваш учебный автомобиль</p>
+
+                </div>
             </div>
         </div>
+    </div>
+    <div class="next-lessons">
+    <h5>Предстоящие занятия:</h5>
+    <table id="next-lessons" class="display">
+            <tbody>
+            <tr>
+                <th>Дата</th>
+                <th>Время</th>
+                <th>Вид занятия</th>
+                <th>Тема</th>
+            </tr>
+            <tr>
+                <td>25.05.2021</td>
+                <td>17:00 - 18:30</td>
+                <td>Теория</td>
+                <td>Начало движения, маневрирование</td>
+            </tr>
+            <tr>
+            <tr>
+                <td>27.05.2021</td>
+                <td>19:30 - 21:00</td>
+                <td>Практическое вождение</td>
+                <td>Езда по городу</td>
+            </tr>
+
+            </tbody>
+        </table>
     </div>
 
 
