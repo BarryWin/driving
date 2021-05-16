@@ -8,7 +8,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'DataTables/datatables.min.css' %}">
@@ -39,7 +39,7 @@
                 <a href="{% url 'schedule' %}"><i class="fa fa-calendar mr-3 notif"></i> Расписание</a>
             </li>
             <li>
-                <a href="{% url 'tests' %}"><i class="fa fa-calendar mr-3 notif"></i> Билеты ПДД</a>
+                <a href="{% url 'tests' %}"><i class="fa fa-graduation-cap mr-2 notif"></i> Билеты ПДД</a>
             </li>
             <li>
                 <a href="/history"><i class="fa fa-gift mr-3"></i> История вождений</a>

@@ -16,4 +16,8 @@ def tests(request):
 
 def history(request):
     return render(request, 'main/history.html')
+
+
+def login(request):
+    return render(request, 'main/login.html')
 # Create your views here.

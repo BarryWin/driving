@@ -157,6 +157,6 @@ h2.page-title {
     margin-top: 20px;
 }
 
-a:hover {
+a.download:hover {
     text-decoration: underline !important;
 }

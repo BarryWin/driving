@@ -43,3 +43,4 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('#next-lessons').DataTable();
 });
+
