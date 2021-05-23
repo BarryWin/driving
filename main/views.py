@@ -6,6 +6,10 @@ def index(request):
     return render(request, 'main/index.html')
 
 
+def teacher(request):
+    return render(request, 'main/teacher.html')
+
+
 def schedule(request):
     return render(request, 'main/schedule.html')
 

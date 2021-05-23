@@ -11,6 +11,9 @@ i.fa {
 }
 
 .nav-line {
+    display: flex;
+    justify-content: end;
+    align-items: center;
     height: 55px;
     width: 100%;
     background: #32373d;
@@ -36,7 +39,8 @@ h6.role-title {
     margin: auto;
     padding: 0;
     color: #F8CB33;
-    max-width: 90px;
+    min-width: 90px;
+    max-width: 110px;
     box-shadow: 0 0 15px 5px #555;
     background-color: rgba(50, 55, 61, 0.7);
     border-radius: 5px;
@@ -123,7 +127,7 @@ h2.page-title {
     width: 100%;
 }
 
-.item-phone {
+.item-detail {
     font-size: 15px;
     margin: 0;
     margin-bottom: 10px;
@@ -134,6 +138,11 @@ h2.page-title {
     font-size: 18px;
     margin: 0;
     padding-right: 7px;
+}
+
+.item-name.item-blue {
+    color: #26a1ab!important;
+    font-size: 14px;
 }
 
 .item-title {
@@ -159,4 +168,64 @@ h2.page-title {
 
 a.download:hover {
     text-decoration: underline !important;
+}
+
+.date-range {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: -15px;
+    color: #666
+}
+
+.cd-schedule__top-info {
+    font-size: 15px;
+}
+
+.js .cd-schedule__timeline li span {
+    font-size: 12px;
+}
+
+.cd-schedule__event {
+    transition: transform 0.2s
+}
+
+.cd-schedule__event:hover {
+    box-shadow: 0 20px 20px 20px rgb(0 0 0 / 10%);
+    transform: translateY(-7px);
+}
+
+.cd-schedule-modal__date, .cd-schedule__event a::before {
+    font-size: 12px;
+    opacity: .8;
+}
+
+@media (min-width: 64rem) {
+    .js .cd-schedule__group {
+        border: 1.5px solid var(--cd-color-border);
+    }
+}
+
+.event-content {
+    font-size: 16px;
+}
+
+.event-content .datetime {
+    font-size: 19px;
+    margin-left: 10px;
+}
+
+.vehicle {
+    margin-left: 40px;
+}
+
+.sign-out {
+    display: block;
+    margin-left: auto;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    margin-right: 40px;
+}
+
+.sign-out:hover {
+    color: rgba(255, 255, 255, 0.8);
 }

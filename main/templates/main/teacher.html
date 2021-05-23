@@ -1,4 +1,4 @@
-{% extends 'main/layout.html' %}
+{% extends 'main/layout-teacher.html' %}
 
 {% load static %}
 
@@ -10,57 +10,66 @@
         <div class="greetings">
             <img class="wheel" src="{% static 'main/images/wheel.png' %}" alt="">
             <div class="text-block">
-                <p class="greetings-text">Здравствуйте, <b>Иван Иванович!</b></p>
+                <p class="greetings-text">Здравствуйте, <b>Никита Сергеевич!</b></p>
                 <p class="greetings-text">Это ваш личный кабинет в автошколе <b>"Автошкола 29"</b></p>
-                <p class="greetings-text">Ваша группа <b>"32512"</b>, направление подготовки <b>"B"</b></p>
+                <p class="greetings-text">Вы являетесь инструктором по практическому вождению</p>
                 <p class="greetings-text">Адрес учебного класса: г. Северодвинск, ул. Ломоносова 85, к1</p>
                 <p class="greetings-text">Телефон автошколы: <b>+79112221122</b></p>
             </div>
         </div>
         <div class="personal-info">
             <h5>Личная информация</h5>
-            <p class="greetings-text"><b>ФИО: </b><span>Иванов Иван Иванович</span></p>
-            <p class="greetings-text"><b>Дата рождения: </b><span>31.10.1999</span></p>
-            <p class="greetings-text"><b>Адрес проживания: </b><span>ул. Орджоникидзе 30, кв. 26</span></p>
-            <p class="greetings-text"><b>Электронная почта: </b><span>ivanivanov@yandex.ru</span></p>
-            <p class="greetings-text"><b>Номер телефона: </b><span>+79115045117</span></p>
+            <p class="greetings-text"><b>ФИО: </b><span>Костылев Никита Сергеевич</span></p>
+            <p class="greetings-text"><b>Дата рождения: </b><span>24.01.1999</span></p>
+            <p class="greetings-text"><b>Адрес проживания: </b><span>ул. Лебедева 15, кв. 26</span></p>
+            <p class="greetings-text"><b>Электронная почта: </b><span>kostyl@yandex.ru</span></p>
+            <p class="greetings-text"><b>Номер телефона: </b><span>+79115151223</span></p>
         </div>
     </div>
     <div class="personal-docs">
-        <h5>Ваши документы:</h5>
-        <h5 class="bg-danger text-white pl-1">У вас сданы не все документы</h5>
-        <h5 class="bg-success text-white pl-1 d-none">Все документы сданы</h5>
+        <h5>Предстоящие занятия с учениками:</h5>
+{#        <h5 class="bg-danger text-white pl-1">У вас сданы не все документы</h5>#}
+{#        <h5 class="bg-success text-white pl-1 d-none">Все документы сданы</h5>#}
         <table id="documents" class="display">
+
             <thead>
             <tr>
-                <th>Название документа</th>
-                <th>Наличие</th>
-                <th>Номер документа</th>
-                <th>Копия документа</th>
+                <th>ФИО ученика</th>
+                <th>Дата занятия</th>
+                <th>Время</th>
+                <th>Место встречи</th>
             </tr>
             </thead>
             <tr>
-                <td>Договор</td>
-                <td class="text-success">Есть</td>
-                <td>2215077</td>
+                <td>Власов Вячеслав Алексеевич</td>
+                <td class="text-info">24.05.2021</td>
+                <td>09:00 - 10:30</td>
                 <td><u><a class="btn btn-secondary btn-sm download" href="">Загрузить</a><a
                         class="btn btn-secondary btn-sm ml-2 download" href="">Скачать</a></u></td>
             </tr>
             <tr>
             <tr>
-                <td>Медицинская справка</td>
-                <td class="text-success">Есть</td>
-                <td>0115833</td>
+                <td>Корнеев Максим Сергеевич</td>
+                <td class="text-info">24.05.2021</td>
+                <td>13:30 - 15:00</td>
                 <td><u><a class="btn btn-secondary btn-sm download" href="">Загрузить</a><a
                         class="btn btn-secondary btn-sm ml-2 download" href="">Скачать</a></u></td>
             </tr>
             <tr>
-                <td>Квитанция об оплате</td>
-                <td class="text-danger">Нет</td>
-                <td>-</td>
+                <td>Халабуда Олег Дмитриевич</td>
+                <td class="text-info">24.05.2021</td>
+                <td>18:00 - 19:30</td>
                 <td><u><a class="btn btn-secondary btn-sm download" href="">Загрузить</a><a
                         class="btn btn-secondary btn-sm ml-2 download" href="">Скачать</a></u></td>
             </tr>
+            <tr>
+                <td>Кичева Дарья Андреевна</td>
+                <td class="text-info">25.05.2021</td>
+                <td>12:00 - 13:30</td>
+                <td><u><a class="btn btn-secondary btn-sm download" href="">Загрузить</a><a
+                        class="btn btn-secondary btn-sm ml-2 download" href="">Скачать</a></u></td>
+            </tr>
+
         </table>
         <div class="study-items">
             <div class="instructor shadow">
@@ -86,14 +95,13 @@
     <div class="next-lessons">
         <h5>Предстоящие занятия:</h5>
         <table id="next-lessons" class="display">
-            <thead>
+            <tbody>
             <tr>
                 <th>Дата</th>
                 <th>Время</th>
                 <th>Вид занятия</th>
                 <th>Тема</th>
             </tr>
-            </thead>
             <tr>
                 <td>25.05.2021</td>
                 <td>17:00 - 18:30</td>
@@ -108,6 +116,7 @@
                 <td>Езда по городу</td>
             </tr>
 
+            </tbody>
         </table>
     </div>
 
