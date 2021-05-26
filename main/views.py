@@ -28,4 +28,8 @@ def login(request):
 
 def students(request):
     return render(request, 'main/students.html')
+
+
+def chat(request):
+    return render(request, 'main/chat.html')
 # Create your views here.
