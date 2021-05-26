@@ -235,3 +235,8 @@ a.download:hover {
 .sign-out:hover {
     color: rgba(255, 255, 255, 0.8);
 }
+
+.btn-chat {
+    display: block;
+    margin-left: auto;
+}
