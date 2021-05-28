@@ -39,17 +39,17 @@
         </div>
         <h3 class="nav-title ml-4 mt-3">Навигация</h3>
         <ul class="list-unstyled components mb-5">
-            <li class="active">
-                <a href="{% url 'teacher' %}"><i class="fa fa-home mr-3"></i> Главная</a>
+            <li>
+                <a class="menu-link" href="{% url 'teacher' %}"><i class="fa fa-home mr-3"></i> Личный кабинет</a>
             </li>
             <li>
-                <a href="{% url 'schedule' %}"><i class="fa fa-calendar mr-3 notif"></i> Расписание</a>
+                <a class="menu-link" href="{% url 'schedule-teacher' %}"><i class="fa fa-calendar mr-3 notif"></i> Расписание</a>
             </li>
             <li>
-                <a href="{% url 'students' %}"><i class="fa fa-calendar mr-3 notif"></i> Ученики</a>
+                <a class="menu-link" href="{% url 'students' %}"><i class="fa fa-calendar mr-3 notif"></i> Ученики</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-sign-out mr-3"></i> Выйти</a>
+                <a href="{% url 'login' %}"><i class="fa fa-sign-out mr-3"></i> Выйти</a>
             </li>
         </ul>
         <img class="logo-school" src="{% static 'main/images/logo.png' %}" alt="logo">
@@ -60,10 +60,11 @@
     <!-- Page Content  -->
     <div id="content">
         <div class="nav-line">
-            <button type="button" class="fa fa-comments" data-toggle="modal" data-target="#exampleModal">
-
-            </button>
-            <a href="#" class="sign-out"><i class="fa fa-sign-out mr-1"></i> Выйти</a>
+            <div class="nav-line-btns">
+                <i class="fa fa-comments d-block btn-chat" data-toggle="modal" data-target="#exampleModal">
+                </i>
+                <a href="{% url 'login' %}" class="sign-out"><i class="fa fa-sign-out mr-1"></i> Выйти</a>
+            </div>
         </div>
         <div class="content-main">
             {% block content %}

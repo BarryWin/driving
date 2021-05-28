@@ -26,6 +26,10 @@ def login(request):
     return render(request, 'main/login.html')
 
 
+def scheduleTeacher(request):
+    return render(request, 'main/schedule-teacher.html')
+
+
 def students(request):
     return render(request, 'main/students.html')
 

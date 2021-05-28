@@ -32,27 +32,27 @@
         <div class="img bg-wrap text-center py-4" style="background-image:  url({% static 'main/images/car.jpg' %});">
             <div class="user-logo">
                 <div class="img user-img" style="background-image: url({% static 'main/images/me.jpg' %});"></div>
-                <h3>Иван Иванов</h3>
+                <h3>Вячеслав Власов</h3>
                 <h6 class="role-title">Ученик</h6>
             </div>
         </div>
         <h3 class="nav-title ml-4 mt-3">Навигация</h3>
         <ul class="list-unstyled components mb-5">
-            <li class="active">
-                <a href="{% url 'home' %}"><i class="fa fa-home mr-3"></i> Главная</a>
+            <li>
+                <a class="menu-link" href="{% url 'home' %}"><i class="fa fa-home mr-3"></i> Личный кабинет</a>
             </li>
             <li>
-                <a href="{% url 'schedule' %}"><i class="fa fa-calendar mr-3 notif"></i> Расписание</a>
+                <a class="menu-link" href="{% url 'schedule' %}"><i class="fa fa-calendar mr-3 notif"></i> Расписание</a>
             </li>
             <li>
-                <a href="{% url 'tests' %}"><i class="fa fa-graduation-cap mr-2 notif"></i> Билеты ПДД</a>
+                <a class="menu-link" href="{% url 'tests' %}"><i class="fa fa-graduation-cap mr-2 notif"></i> Тестирование</a>
             </li>
             <li>
-                <a href="{% url 'history' %}"><i class="fa fa-gift mr-3"></i> История вождений</a>
+                <a class="menu-link" href="{% url 'history' %}"><i class="fa fa-gift mr-3"></i> История вождений</a>
             </li>
 
             <li>
-                <a href="#"><i class="fa fa-sign-out mr-3"></i> Выйти</a>
+                <a href="{% url 'login' %}"><i class="fa fa-sign-out mr-3"></i> Выйти</a>
             </li>
         </ul>
         <img class="logo-school" src="{% static 'main/images/logo.png' %}" alt="logo">
@@ -63,12 +63,12 @@
     <!-- Page Content  -->
     <div id="content">
         <div class="nav-line">
+            <div class="nav-line-btns">
+                <i class="fa fa-comments btn-chat" data-toggle="modal" data-target="#exampleModal">
 
-            <button type="button" class="btn btn-primary btn-chat" data-toggle="modal" data-target="#exampleModal">
-                Чат
-            </button>
-
-            <a href="#" class="sign-out"><i class="fa fa-sign-out mr-1"></i> Выйти</a>
+                </i>
+                <a href="{% url 'login' %}" class="sign-out"><i class="fa fa-sign-out mr-1"></i> Выйти</a>
+            </div>
         </div>
         <div class="content-main">
             {% block content %}

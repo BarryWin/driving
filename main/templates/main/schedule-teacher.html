@@ -1,0 +1,457 @@
+{% extends 'main/layout-teacher.html' %}
+{% load static %}
+
+{% block title %} Расписание {% endblock %}
+
+{% block content %}
+    <h2 class="page-title">Расписание</h2>
+    <h4 class="date-range">24 Май 2021 - 29 Май 2021</h4>
+    {#    <iframe src="https://calendar.google.com/calendar/embed?src=b9f017pol0i40pkmjo3u9bjv70%40group.calendar.google.com&ctz=Europe%2FMoscow"#}
+    {#            style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>#}
+    <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
+        <div class="cd-schedule__timeline">
+            <ul>
+                <li><span>09:00</span></li>
+                <li><span>09:45</span></li>
+                <li><span>10:30</span></li>
+                <li><span>11:15</span></li>
+                <li><span>12:00</span></li>
+                <li><span>12:45</span></li>
+                <li><span>13:30</span></li>
+                <li><span>14:15</span></li>
+                <li><span>15:00</span></li>
+                <li><span>15:45</span></li>
+                <li><span>16:30</span></li>
+                <li><span>17:15</span></li>
+                <li><span>18:00</span></li>
+                <li><span>18:45</span></li>
+                <li><span>19:30</span></li>
+                <li><span>20:15</span></li>
+                <li><span>21:00</span></li>
+
+            </ul>
+        </div> <!-- .cd-schedule__timeline -->
+
+        <div class="cd-schedule__events">
+            <ul>
+                <li class="cd-schedule__group">
+                    <div class="cd-schedule__top-info"><span>Понедельник, Май 24</span></div>
+
+                    <ul>
+                        <li class="cd-schedule__event">
+                            <a data-start="09:00" data-end="10:30" data-content="{% static 'main/event-teacher-lesson' %}"
+                               data-event="event-1"
+                               href="#0">
+                                <em class="cd-schedule__name">Практическое занятие</em>
+                                <span> <b class="student-lesson">Ученик: Власов В.А.</b></span>
+
+
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="10:30" data-end="12:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="12:00" data-end="13:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="13:30" data-end="15:00" data-content="{% static 'main/event-teacher-lesson' %}"
+                               data-event="event-1"
+                               href="#0">
+                                <em class="cd-schedule__name">Практическое занятие</em>
+                                <span> <b class="student-lesson">Ученик: Корнеев М.С.</b></span>
+
+
+                            </a>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="16:30" data-end="18:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="18:00" data-end="19:30" data-content="{% static 'main/event-teacher-lesson' %}"
+                               data-event="event-1"
+                               href="#0">
+                                <em class="cd-schedule__name">Практическое занятие</em>
+                                <span> <b class="student-lesson">Ученик: Халабуда О.Д.</b></span>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="19:30" data-end="21:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="cd-schedule__group">
+                    <div class="cd-schedule__top-info"><span>Вторник, Май 25</span></div>
+
+                    <ul>
+                        <li class="cd-schedule__event">
+                            <a data-start="9:00" data-end="10:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="10:30" data-end="12:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="12:00" data-end="13:30" data-content="{% static 'main/event-teacher-lesson' %}"
+                               data-event="event-1"
+                               href="#0">
+                                <em class="cd-schedule__name">Практическое занятие</em>
+                                <span> <b class="student-lesson">Ученик: Кичева Д.А.</b></span>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="13:30" data-end="15:00" data-content="{% static 'main/event-teacher-lesson' %}"
+                               data-event="event-1"
+                               href="#0">
+                                <em class="cd-schedule__name">Практическое занятие</em>
+                                <span> <b class="student-lesson">Ученик: Дегтев А.А.</b></span>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="16:30" data-end="18:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="18:00" data-end="19:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="19:30" data-end="21:00" data-content="{% static 'main/event-teacher-lesson' %}"
+                               data-event="event-1"
+                               href="#0">
+                                <em class="cd-schedule__name">Практическое занятие</em>
+                                <span> <b class="student-lesson">Ученик: Халабуда О.Д.</b></span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="cd-schedule__group">
+                    <div class="cd-schedule__top-info"><span>Среда, Май 26</span></div>
+
+                    <ul>
+                        <li class="cd-schedule__event">
+                            <a data-start="9:00" data-end="10:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="10:30" data-end="12:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="12:00" data-end="13:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="13:30" data-end="15:00" data-content="{% static 'main/event-teacher-empty' %}" data-event="event-2"
+                               href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="16:30" data-end="18:00" data-content="{% static 'main/event-teacher-lesson' %}"
+                               data-event="event-1"
+                               href="#0">
+                                <em class="cd-schedule__name">Практическое занятие</em>
+                                <span> <b class="student-lesson">Ученик: Власов В.А.</b></span>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="18:00" data-end="19:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="19:30" data-end="21:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="cd-schedule__group">
+                    <div class="cd-schedule__top-info"><span>Четверг, Май 27</span></div>
+
+                    <ul>
+                        <li class="cd-schedule__event">
+                            <a data-start="9:00" data-end="10:30" data-content="{% static 'main/event-teacher-lesson' %}"
+                               data-event="event-1"
+                               href="#0">
+                                <em class="cd-schedule__name">Практическое занятие</em>
+                                <span> <b class="student-lesson">Ученик: Корнеев М.С.</b></span>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="10:30" data-end="12:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="12:00" data-end="13:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="13:30" data-end="15:00" data-content="{% static 'main/event-teacher-empty' %}" data-event="event-2"
+                               href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="16:30" data-end="18:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="18:00" data-end="19:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="19:30" data-end="21:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="cd-schedule__group">
+                    <div class="cd-schedule__top-info"><span>Пятница, Май 28</span></div>
+
+                    <ul>
+                        <li class="cd-schedule__event">
+                            <a data-start="9:00" data-end="10:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="10:30" data-end="12:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="12:00" data-end="13:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="13:30" data-end="15:00" data-content="{% static 'main/event-teacher-empty' %}" data-event="event-2"
+                               href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="16:30" data-end="18:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="18:00" data-end="19:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="19:30" data-end="21:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="cd-schedule__group">
+                    <div class="cd-schedule__top-info"><span>Суббота, Май 29</span></div>
+
+                    <ul>
+                        <li class="cd-schedule__event">
+                            <a data-start="9:00" data-end="10:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="10:30" data-end="12:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="12:00" data-end="13:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="13:30" data-end="15:00" data-content="{% static 'main/event-teacher-empty' %}" data-event="event-2"
+                               href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-teacher-lesson' %}"
+                               data-event="event-1"
+                               href="#0">
+                                <em class="cd-schedule__name">Практическое занятие</em>
+                                <span> <b class="student-lesson">Ученик: Власов В.А.</b></span>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="16:30" data-end="18:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="18:00" data-end="19:30" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                        <li class="cd-schedule__event">
+                            <a data-start="19:30" data-end="21:00" data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
+                                <em class="cd-schedule__name">Незанятое время</em>
+                            </a>
+                        </li>
+
+                    </ul>
+        </div>
+
+        <div class="cd-schedule-modal">
+            <header class="cd-schedule-modal__header">
+                <div class="cd-schedule-modal__content">
+                    <span class="cd-schedule-modal__date"></span>
+                    <h3 class="cd-schedule-modal__name"></h3>
+                </div>
+
+                <div class="cd-schedule-modal__header-bg"></div>
+            </header>
+
+            <div class="cd-schedule-modal__body">
+                <div class="cd-schedule-modal__event-info"></div>
+                <div class="cd-schedule-modal__body-bg"></div>
+            </div>
+
+            <a href="#0" class="cd-schedule-modal__close text-replace">Close</a>
+        </div>
+
+        <div class="cd-schedule__cover-layer"></div>
+    </div> <!-- .cd-schedule -->
+
+
+{% endblock %}

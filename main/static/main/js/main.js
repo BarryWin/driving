@@ -44,3 +44,14 @@ $(document).ready(function () {
     $('#next-lessons').DataTable();
 });
 
+let menuLink = document.querySelectorAll('.menu-link');
+let pageLocation = window.location.href;
+
+menuLink.forEach(link => {
+
+	let linkAddress = link.href;
+
+	if (pageLocation === linkAddress) {
+	    link.parentElement.classList.add('active');
+	}
+});

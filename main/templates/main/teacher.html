@@ -24,10 +24,12 @@
             <p class="greetings-text"><b>Адрес проживания: </b><span>ул. Лебедева 15, кв. 26</span></p>
             <p class="greetings-text"><b>Электронная почта: </b><span>kostyl@yandex.ru</span></p>
             <p class="greetings-text"><b>Номер телефона: </b><span>+79115151223</span></p>
+            <i class="fa fa-pencil-square" aria-hidden="true"></i>
+
         </div>
     </div>
     <div class="personal-docs">
-        <h5>Предстоящие занятия с учениками:</h5>
+        <h5>Предстоящие занятия с учениками (<a href="{% url 'students' %}"><u>Список учеников</u></a>):</h5>
         {#        <h5 class="bg-danger text-white pl-1">У вас сданы не все документы</h5>#}
         {#        <h5 class="bg-success text-white pl-1 d-none">Все документы сданы</h5>#}
         <table id="documents" class="display">
