@@ -282,3 +282,23 @@ color: #e5e5e5
 .fa-pencil-square:hover {
     color: #b8b8b8;
 }
+
+.hours-remain {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hours-remain span {
+    background: #509854;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+}
+
+.student-line {
+    cursor: pointer;
+}

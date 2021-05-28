@@ -24,9 +24,60 @@
             <p class="greetings-text"><b>Адрес проживания: </b><span>ул. Орджоникидзе 30, кв. 26</span></p>
             <p class="greetings-text"><b>Электронная почта: </b><span>slavavlasov@yandex.ru</span></p>
             <p class="greetings-text"><b>Номер телефона: </b><span>+79115045117</span></p>
-            <i class="fa fa-pencil-square" aria-hidden="true"></i>
+            <i class="fa fa-pencil-square" aria-hidden="true" data-toggle="modal" data-target="#contactsModal"></i>
         </div>
     </div>
+
+    <div class="modal fade" id="contactsModal" tabindex="-1" role="dialog" aria-labelledby="contactsModal"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Контактная информация</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Электронная почта</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                   placeholder="Введите ваш электронный адрес">
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">Номер телефона</label>
+                            <input type="text" class="form-control" id="tel" placeholder="Введите ваш телефон">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Изменить</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="exams">
+        <h5>Прогресс по экзаменам:</h5>
+        <table id="exams" class="display">
+            <thead>
+            <tr>
+                <th>Внутренний экзамен по теории</th>
+                <th>Внутренний экзамен по вождению</th>
+                <th>Экзамен ГАИ по теории</th>
+                <th>Экзамен ГАИ по вождению</th>
+            </tr>
+            </thead>
+            <tr>
+                <td class="text-success">Сдан</td>
+                <td class="text-danger">Не сдан</td>
+                <td class="text-danger">Не сдан</td>
+                <td class="text-danger">Не сдан</td>
+            </tr>
+            <tr>
+        </table>
+    </div>
+
     <div class="personal-docs">
         <h5>Ваши документы:</h5>
         <h5 class="bg-danger text-white pl-1">У вас сданы не все документы</h5>

@@ -34,6 +34,13 @@ $(document).ready(function () {
             }
         }
     });
+
+     $('#tel').mask('+7 (000) 000-0000');
+});
+
+
+$(document).ready(function () {
+    $('#exams').DataTable();
 });
 
 $(document).ready(function () {
