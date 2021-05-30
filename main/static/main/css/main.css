@@ -256,7 +256,7 @@ a.download:hover {
 }
 
 .student-lesson {
-color: #e5e5e5
+    color: #e5e5e5
 }
 
 .event-btns {
@@ -295,10 +295,31 @@ color: #e5e5e5
     border-radius: 5px;
 }
 
+.hours-remain.fz-sm {
+    font-size: 16px;
+}
+
 .form-control {
     border: 1px solid #ced4da;
 }
 
 .student-line {
     cursor: pointer;
+}
+
+.student-info {
+    display: flex;
+}
+
+.student-photo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.modal-xxl {
+    max-width: 1200px;
 }

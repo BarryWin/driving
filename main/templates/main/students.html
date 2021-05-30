@@ -78,7 +78,7 @@
 
     <div class="modal fade" id="studentModal" tabindex="-1" role="dialog" aria-labelledby="studentModal"
          aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-dialog modal-xxl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ученик</h5>
@@ -87,17 +87,143 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="student-info">
+                        <div class="student-photo"
+                             style="background-image: url({% static 'main/images/me.jpg' %});"></div>
+                        <div class="ml-3">
+                            <span class="h6">ФИО: </span><h5 class="student-fio text-primary">Власов Вячеслав
+                            Алексеевич</h5>
+                            <span class="h6">Номер телефона: </span><h5 class="student-fio text-primary">+79115045117</h5>
+
+                        </div>
+                    </div>
+                    <h6 class="mt-4">Прогресс по экзаменам:</h6>
+                    <table id="exams" class="display">
+                        <thead>
+                        <tr>
+                            <th>Внутренний экзамен по теории</th>
+                            <th>Внутренний экзамен по вождению</th>
+                            <th>Экзамен ГАИ по теории</th>
+                            <th>Экзамен ГАИ по вождению</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <td class="text-success">Сдан</td>
+                            <td class="text-danger">Не сдан</td>
+                            <td class="text-danger">Не сдан</td>
+                            <td class="text-danger">Не сдан</td>
+                        </tr>
+                        <tr>
+                    </table>
+                    <h6 class="hours-remain mt-4 fz-sm">Осталось часов вождения: <span>21</span></h6>
+                    <h6 class="mt-4 mb-3">История занятий:</h6>
+                    <table id="lessons-history" class="display mt-3">
+                        <thead>
+                        <tr>
+                            <th>Дата</th>
+                            <th>Время</th>
+                            <th>Часы</th>
+                            <th>Вид занятия</th>
+                            <th>Тема</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <td>25.05.2021</td>
+                            <td>17:00 - 18:30</td>
+                            <td>-1.5</td>
+                            <td>Практическое занятие</td>
+                            <td>Автодром</td>
+                        </tr>
+                        <tr>
+                            <td>27.05.2021</td>
+                            <td>19:30 - 21:00</td>
+                            <td>-1.5</td>
+                            <td>Практическое занятие</td>
+                            <td>Езда по городу</td>
+                        </tr>
+                        <tr>
+                            <td>25.05.2021</td>
+                            <td>17:00 - 18:30</td>
+                            <td>-1.5</td>
+                            <td>Практическое занятие</td>
+                            <td>Автодром</td>
+                        </tr>
+                        <tr>
+                            <td>27.05.2021</td>
+                            <td>19:30 - 21:00</td>
+                            <td>-1.5</td>
+                            <td>Практическое занятие</td>
+                            <td>Езда по городу</td>
+                        </tr>
+                        <tr>
+                            <td>25.05.2021</td>
+                            <td>17:00 - 18:30</td>
+                            <td>-1.5</td>
+                            <td>Практическое занятие</td>
+                            <td>Автодром</td>
+                        </tr>
+                        <tr>
+                            <td>27.05.2021</td>
+                            <td>19:30 - 21:00</td>
+                            <td>-1.5</td>
+                            <td>Практическое занятие</td>
+                            <td>Езда по городу</td>
+                        </tr>
+                        <tr>
+                            <td>25.05.2021</td>
+                            <td>17:00 - 18:30</td>
+                            <td>-1.5</td>
+                            <td>Практическое занятие</td>
+                            <td>Автодром</td>
+                        </tr>
+                        <tr>
+                            <td>27.05.2021</td>
+                            <td>19:30 - 21:00</td>
+                            <td>-1.5</td>
+                            <td>Практическое занятие</td>
+                            <td>Езда по городу</td>
+                        </tr>
+                        <tr>
+                            <td>25.05.2021</td>
+                            <td>17:00 - 18:30</td>
+                            <td>-1.5</td>
+                            <td>Практическое занятие</td>
+                            <td>Автодром</td>
+                        </tr>
+                        <tr>
+                            <td>27.05.2021</td>
+                            <td>19:30 - 21:00</td>
+                            <td>-1.5</td>
+                            <td>Практическое занятие</td>
+                            <td>Езда по городу</td>
+                        </tr>
+                        <tr>
+                            <td>25.05.2021</td>
+                            <td>17:00 - 18:30</td>
+                            <td>-1.5</td>
+                            <td>Практическое занятие</td>
+                            <td>Автодром</td>
+                        </tr>
+                        <tr>
+                            <td>27.05.2021</td>
+                            <td>19:30 - 21:00</td>
+                            <td>-1.5</td>
+                            <td>Практическое занятие</td>
+                            <td>Езда по городу</td>
+                        </tr>
+
+                    </table>
                     <form>
                         <div class="form-group">
-{#                            <label for="email">Электронная почта</label>#}
-{#                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"#}
-{#                                   placeholder="Введите ваш электронный адрес">#}
+                            {#                            <label for="email">Электронная почта</label>#}
+                            {#                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"#}
+                            {#                                   placeholder="Введите ваш электронный адрес">#}
                         </div>
                         <div class="form-group">
-{#                            <label for="tel">Номер телефона</label>#}
-{#                            <input type="text" class="form-control" id="tel" placeholder="Введите ваш телефон">#}
+                            {#                            <label for="tel">Номер телефона</label>#}
+                            {#                            <input type="text" class="form-control" id="tel" placeholder="Введите ваш телефон">#}
                         </div>
-{#                        <button type="submit" class="btn btn-primary">Изменить</button>#}
+                        {#                        <button type="submit" class="btn btn-primary">Изменить</button>#}
                     </form>
 
                 </div>
