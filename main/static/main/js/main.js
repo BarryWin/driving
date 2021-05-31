@@ -19,6 +19,7 @@
 })(jQuery);
 
 $(document).ready(function () {
+
     $('#table_id').DataTable({
         "language": {
             "lengthMenu": "Показывает _MENU_ записей на странице",
@@ -32,11 +33,14 @@ $(document).ready(function () {
                 "previous": "Предыдущая страница",
                 "next": "Следующая страница",
             }
-        }
+        },
+
     });
 
-     $('#tel').mask('+7 (000) 000-0000');
-     $('#lessons-history').DataTable();
+
+    $('#tel').mask('+7 (000) 000-0000');
+    $('#lessons-history').DataTable();
+
 });
 
 
@@ -57,9 +61,9 @@ let pageLocation = window.location.href;
 
 menuLink.forEach(link => {
 
-	let linkAddress = link.href;
+    let linkAddress = link.href;
 
-	if (pageLocation === linkAddress) {
-	    link.parentElement.classList.add('active');
-	}
+    if (pageLocation === linkAddress) {
+        link.parentElement.classList.add('active');
+    }
 });
