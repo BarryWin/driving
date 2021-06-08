@@ -3,11 +3,17 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'main/index.html')
+    data = {
+        'title': "Личный кабинет"
+    }
+    return render(request, 'main/index.html', data)
 
 
 def teacher(request):
-    return render(request, 'main/teacher.html')
+    data = {
+        'title': "Личный кабинет"
+    }
+    return render(request, 'main/teacher.html', data)
 
 
 def schedule(request):
@@ -15,7 +21,10 @@ def schedule(request):
 
 
 def tests(request):
-    return render(request, 'main/tests.html')
+    data = {
+        'title': "Тестирование"
+    }
+    return render(request, 'main/tests.html', data)
 
 
 def history(request):

@@ -2,10 +2,10 @@
 
 {% load static %}
 
-{% block title %} Личный кабинет {% endblock %}
+{% block title %} {{ title }} {% endblock %}
 
 {% block content %}
-    <h2 class="page-title">Личный кабинет</h2>
+    <h2 class="page-title">{{ title }}</h2>
     <div class="account">
         <div class="greetings">
             <img class="wheel" src="{% static 'main/images/wheel.png' %}" alt="">
