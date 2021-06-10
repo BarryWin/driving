@@ -177,7 +177,7 @@ a.download:hover {
 
 .date-range {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: -15px;
     color: #666
 }
@@ -322,4 +322,32 @@ a.download:hover {
 
 .modal-xxl {
     max-width: 1200px;
+}
+
+.colors-map {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    .colors-map {
+        justify-content: flex-start;
+        margin-left: 30px;
+    }
+}
+
+.color-item {
+    display: flex;
+    align-items: center;
+}
+
+
+.color {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
 }

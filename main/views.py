@@ -17,7 +17,10 @@ def teacher(request):
 
 
 def schedule(request):
-    return render(request, 'main/schedule.html')
+    data = {
+        'title': "Расписание"
+    }
+    return render(request, 'main/schedule.html', data)
 
 
 def tests(request):
