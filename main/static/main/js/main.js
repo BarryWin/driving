@@ -39,7 +39,22 @@ $(document).ready(function () {
 
 
     $('#tel').mask('+7 (000) 000-0000');
-    $('#lessons-history').DataTable();
+    $('#lessons-history').DataTable({
+        "language": {
+            "lengthMenu": "Показывает _MENU_ записей на странице",
+            "zeroRecords": "Ничего не найдено - сори",
+            "emptyTable": "В таблицы нет данных",
+            "info": "Показано _END_ из _TOTAL_ записей",
+            "infoEmpty": "Нет доступных записей",
+            "infoFiltered": "(Выбрано из _MAX_ записей)",
+            "search": "Поиск:",
+            "paginate": {
+                "previous": "Предыдущая страница",
+                "next": "Следующая страница",
+            }
+        },
+
+    });
 
 });
 
