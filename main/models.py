@@ -15,9 +15,6 @@ class Tranport(models.Model):
         verbose_name_plural = 'Справочник трансопрта'
 
 class Ucheniki(models.Model):
-    name = models.CharField('Имя', max_length=150)
-    fam = models.CharField('Фамилия', max_length=200)
-    otch = models.CharField('Отчество', max_length=200)
     fio = models.CharField('ФИО', max_length=60)
     gruppa = models.CharField('Группа', max_length=10)
     date_rogd = models.DateField('Дата рождения')
@@ -239,10 +236,6 @@ class Documenti(models.Model):
     class Meta:
         verbose_name = 'Журнал'
         verbose_name_plural = 'Журнал'
-
-
-
-
 
 
 
