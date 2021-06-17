@@ -14,8 +14,29 @@ class Tranport(models.Model):
         verbose_name = 'Справочник транспорта'
         verbose_name_plural = 'Справочник трансопрта'
 
+class DrivingCard(models.Model):
+    date = models.DateTimeField('Дата занятия')
+    comment = models.CharField('Комментарий инструктора', max_length=250)
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return f'/avtoschool/{self.id}'
+
+    class Meta:
+        verbose_name = 'Карточка вождения'
+        verbose_name_plural = 'Карточки вождения'
+
 class Ucheniki(models.Model):
+    name = models.CharField('Имя', max_length=250)
+    fam = models.CharField('Фамилия', max_length=250)
+    otch = models.CharField('Отчество', max_length=250, null=True)
     fio = models.CharField('ФИО', max_length=60)
+    address = models.CharField('Адрес проживания', max_length=250)
+    tel = models.CharField('Телефон', max_length=20)
+    email = models.CharField('Телефон', max_length=150)
+    photo = models.CharField('Фотография', max_length=150)
     gruppa = models.CharField('Группа', max_length=10)
     date_rogd = models.DateField('Дата рождения')
     nomdog = models.CharField('Номер договора', max_length=60)
@@ -32,7 +53,13 @@ class Ucheniki(models.Model):
         verbose_name_plural = 'Ученики'
 
 class Sotrudniki(models.Model):
-    fio = models.CharField('ФИО', max_length=60)
+    name = models.CharField('Имя', max_length=250)
+    fam = models.CharField('Фамилия', max_length=250)
+    otch = models.CharField('Отчество', max_length=250, null=True)
+    fio = models.CharField('ФИО', max_length=250)
+    tel = models.CharField('Телефон', max_length=20)
+    email = models.CharField('Телефон', max_length=150)
+    photo = models.CharField('Фотография', max_length=150)
     date_rogd = models.DateField('Дата рождения')
     dolgn = models.CharField('Должность', max_length=60)
     ucheniki = models.TextField('Ученики', max_length=500)
@@ -181,7 +208,7 @@ class Danuch(models.Model):
 class Dogovor(models.Model):
     nomerdog = models.CharField('Номер договора', max_length=20)
     datesost = models.DateField()
-    stoimostobuch = models.PositiveIntegerField('Стоимость обучения', max_length=20)
+    stoimostobuch = models.PositiveIntegerField('Стоимость обучения')
 
     categ = models.ForeignKey(Progobuch, on_delete=models.PROTECT)
 

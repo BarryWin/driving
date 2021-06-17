@@ -351,3 +351,12 @@ a.download:hover {
     width: 20px;
     margin-right: 8px;
 }
+
+#email::placeholder {
+    color: #808080;
+
+}
+
+#tel::placeholder {
+    color: #808080;
+}

@@ -20,6 +20,19 @@
             <th>Внутренний экзамен по вождению</th>
         </tr>
         </thead>
+        {% if students %}
+            {% for el in students %}
+                <tr class="student-line" aria-hidden="true" data-toggle="modal" data-target="#studentModal">
+                    <td>{{ el.fam }} {{ el.name }} {{ el.otch }}</td>
+                    <td>{{ el.date_rogd }}</td>
+                    <td>{{ el.address }}</td>
+                    <td>30.04.2021</td>
+                    <td>22.5</td>
+                    <td class="text-success">Сдан</td>
+                    <td class="text-danger">Не сдан</td>
+                </tr>
+            {% endfor %}
+        {% endif %}
         <tr class="student-line" aria-hidden="true" data-toggle="modal" data-target="#studentModal">
             <td>Власов Вячеслав Алексеевич</td>
             <td>31.10.1999</td>
