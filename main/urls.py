@@ -10,5 +10,7 @@ urlpatterns = [
     path('teacher', views.teacher, name='teacher'),
     path('schedule-teacher', views.scheduleTeacher, name='schedule-teacher'),
     path('students', views.students, name='students'),
-    path('chat', views.chat, name='chat')
+    path('chat', views.chat, name='chat'),
+    path('student/<int:pk>', views.StudentDetailView.as_view(), name='student-detail'),
+    path('student/<int:pk>', views.StudentUpdateView.as_view(), name='student-update')
 ]

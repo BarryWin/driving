@@ -1,16 +1,44 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Ucheniki
+from .models import Documenti
 from .forms import ContactsForm
+from django.views.generic import DetailView, UpdateView
+
+
+class StudentDetailView(DetailView):
+    model = Ucheniki
+    template_name = 'main/index.html'
+    context_object_name = 'student'
+
+
+class StudentUpdateView(UpdateView):
+    model = Ucheniki, Documenti
+    extra_context = {}
+    template_name = 'main/index.html'
+    context_object_name = 'student'
+    form_class = ContactsForm()
+
+    def get_queryset(self):
+        return
+
 
 def index(request):
     students = Ucheniki.objects.all()
+    error = ''
+    if request.method == 'POST':
+        form = ContactsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+        else:
+            error = 'Форма была неверной'
     form = ContactsForm()
     data = {
         'title': "Личный кабинет",
         'form': form
     }
-    return render(request, 'main/index.html', {'students': students[:1], 'data': data})
+    return render(request, 'main/index.html/1', data)
 
 
 def teacher(request):

@@ -2,28 +2,28 @@
 
 {% load static %}
 
-{% block title %} {{ data.title }} {% endblock %}
+{% block title %} Личный кабинет {% endblock %}
 
 {% block content %}
-    <h2 class="page-title">{{ data.title }}</h2>
+    <h2 class="page-title"> Личный кабинет </h2>
     <div class="account">
         <div class="greetings">
             <img class="wheel" src="{% static 'main/images/wheel.png' %}" alt="">
             <div class="text-block">
-                <p class="greetings-text">Здравствуйте, <b>Вячеслав Алексеевич!</b></p>
+                <p class="greetings-text">Здравствуйте, <b>{{ student.name }} {{ student.otch }}!</b></p>
                 <p class="greetings-text">Это ваш личный кабинет в автошколе <b>"Автошкола 29"</b></p>
-                <p class="greetings-text">Ваша группа <b>"521728"</b>, направление подготовки <b>"B"</b></p>
+                <p class="greetings-text">Ваша группа <b>"{{ student.gruppa }}"</b>, направление подготовки <b>"B"</b></p>
                 <p class="greetings-text">Адрес учебного класса: г. Северодвинск, ул. Ломоносова 85, к1</p>
                 <p class="greetings-text">Телефон автошколы: <b>+79112221122</b></p>
             </div>
         </div>
         <div class="personal-info">
             <h5>Личная информация</h5>
-            <p class="greetings-text"><b>ФИО: </b><span>Власов Вячеслав Алексеевич</span></p>
-            <p class="greetings-text"><b>Дата рождения: </b><span>31.10.1999</span></p>
-            <p class="greetings-text"><b>Адрес проживания: </b><span>ул. Орджоникидзе 30, кв. 26</span></p>
-            <p class="greetings-text"><b>Электронная почта: </b><span>slavavlasov@yandex.ru</span></p>
-            <p class="greetings-text"><b>Номер телефона: </b><span>+79115045117</span></p>
+            <p class="greetings-text"><b>ФИО: </b><span>{{ student.fam }} {{ student.name }} {{ student.otch }}</span></p>
+            <p class="greetings-text"><b>Дата рождения: </b><span>{{ student.date_rogd }}</span></p>
+            <p class="greetings-text"><b>Адрес проживания: </b><span>{{ student.address }}</span></p>
+            <p class="greetings-text"><b>Электронная почта: </b><span>{{ student.email }}</span></p>
+            <p class="greetings-text"><b>Номер телефона: </b><span>{{ student.tel }}</span></p>
             <i class="fa fa-pencil-square" aria-hidden="true" data-toggle="modal" data-target="#contactsModal"></i>
         </div>
     </div>
@@ -43,16 +43,16 @@
                         {% csrf_token %}
                         <div class="form-group">
                             <label for="email">Электронная почта</label>
-                            {{ data.form.email }}
-{#                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"#}
-{#                                   placeholder="Введите ваш электронный адрес" value="slavavlasov@yandex.ru">#}
+                            {{ student.email }}
+                            {#                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"#}
+                            {#                                   placeholder="Введите ваш электронный адрес" value="slavavlasov@yandex.ru">#}
                         </div>
                         <div class="form-group">
                             <label for="tel">Номер телефона</label>
-                            {{ data.form.tel }}
+                            {{ student.tel }}
 
-{#                            <input type="text" class="form-control" id="tel" placeholder="Введите ваш телефон"#}
-{#                                   value="+79115045117">#}
+                            {#                            <input type="text" class="form-control" id="tel" placeholder="Введите ваш телефон"#}
+                            {#                                   value="+79115045117">#}
                         </div>
                         <button type="submit" class="btn btn-primary">Изменить</button>
                     </form>
