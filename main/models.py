@@ -206,6 +206,7 @@ class Dogovor(models.Model):
 class Rasp_teor(models.Model):
     date_zan = models.DateTimeField('Дата занятия')
     fioSotr = models.ForeignKey(Sotrudniki, on_delete=models.PROTECT, verbose_name='Фио сотрудника')
+    nazv = models.ForeignKey(Group, on_delete=models.PROTECT, verbose_name='Группа', default='')
     tema = models.CharField('Тема занятия', max_length=250, default='')
     status = models.CharField('Статус', max_length=20)
 
@@ -218,6 +219,24 @@ class Rasp_teor(models.Model):
     class Meta:
         verbose_name = 'Расписание теоретических занятий'
         verbose_name_plural = 'Расписание теоретических занятий'
+
+
+class Rasp_praktiki(models.Model):
+    date_zan = models.DateTimeField('Дата занятия')
+    fioSotr = models.ForeignKey(Sotrudniki, on_delete=models.PROTECT, verbose_name='ФИО сотрудника')
+    fioUch = models.ForeignKey(Ucheniki, on_delete=models.PROTECT, verbose_name='ФИО ученика')
+    tema = models.CharField('Тема занятия', max_length=250, default='')
+    status = models.CharField('Статус', max_length=20)
+
+    def __str__(self):
+        return self.tema
+
+    def get_absolute_url(self):
+        return f'/avtoschool/{self.id}'
+
+    class Meta:
+        verbose_name = 'Расписание практических занятий'
+        verbose_name_plural = 'Расписание практических занятий'
 
 
 class Zurnal(models.Model):
