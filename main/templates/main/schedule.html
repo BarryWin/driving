@@ -19,13 +19,27 @@
             <div class="color-item"><span style="background: #FD777C" class="color"></span> &ndash; Время занятое другим
                 учеником
             </div>
-            <div class="color-item"><span style="background: #59b1a9" class="color"></span> &ndash; Время проведения теоретического занятия
+            <div class="color-item"><span style="background: #59b1a9" class="color"></span> &ndash; Время проведения
+                теоретического занятия
             </div>
         </div>
 
 
     </div>
-    <h4 class="date-range">24 Май 2021 - 29 Май 2021</h4>
+    <div class="schedule-dates">
+        <h4 class="date-range">24 Май 2021 - 29 Май 2021</h4>
+        <form method="get" class="ml-3">
+            <label class="btn btn-secondary" style="cursor: pointer" for="dateback"><i style="font-size: 17px" class="fa fa-arrow-left"
+                                                                                            aria-hidden="true"></i><input
+                    id="dateback" type="button" class="d-none"></label>
+            <label class="btn btn-secondary" style="cursor: pointer" for="dateforth"><input id="dateforth"
+                                                                                                type="button" class="d-none"><i style="font-size: 17px"
+                    class="fa fa-arrow-right"
+                    aria-hidden="true"></i></label>
+        </form>
+    </div>
+
+
     {#    <iframe src="https://calendar.google.com/calendar/embed?src=b9f017pol0i40pkmjo3u9bjv70%40group.calendar.google.com&ctz=Europe%2FMoscow"#}
     {#            style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>#}
     <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
@@ -228,7 +242,7 @@
 
                         <li class="cd-schedule__event">
                             <a data-start="16:30" data-end="18:00"
-                               ddata-content="{% static 'main/event-driving-lesson' %}"
+                               data-content="{% static 'main/event-driving-lesson' %}"
                                data-event="event-1"
                                href="#0">
                                 <em class="cd-schedule__name">Практическое занятие</em>
@@ -413,10 +427,10 @@
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-abs-circuit' %}"
-                               data-event="event-1"
+                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-empty-place' %}"
+                               data-event="event-2"
                                href="#0">
-                                <em class="cd-schedule__name">Практическое занятие</em>
+                                <em class="cd-schedule__name">Свободное время</em>
                             </a>
                         </li>
 

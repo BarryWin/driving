@@ -11,10 +11,9 @@ class Ucheniki(models.Model):
     tel = models.CharField('Телефон', max_length=20)
     email = models.CharField('Электронынй адрес', max_length=150)
     photo = models.CharField('Фотография', max_length=150)
-    gruppa = models.CharField('Группа', max_length=10)
+    gruppa = models.CharField('Группа', max_length=10, default='')
     date_rogd = models.DateField('Дата рождения')
-    nomdog = models.CharField('Номер договора', max_length=60)
-    nomspravki = models.CharField('Номер медицинской справки', max_length=60)
+
 
     def __str__(self):
         return self.fioUch
@@ -47,6 +46,37 @@ class Sotrudniki(models.Model):
     class Meta:
         verbose_name = 'Сотрудник'
         verbose_name_plural = 'Сотрудники'
+
+
+class Chat(models.Model):
+    fioUch = models.ForeignKey(Ucheniki, on_delete=models.PROTECT, verbose_name='Фио ученика')
+    fioSotr = models.ForeignKey(Sotrudniki, on_delete=models.PROTECT, verbose_name='Фио сотрудника')
+
+    def __str__(self):
+        return self.fioUch, self.fioSotr
+
+    def get_absolute_url(self):
+        return f'/avtoschool/{self.id}'
+
+    class Meta:
+        verbose_name = 'Чат'
+        verbose_name_plural = 'Чаты'
+
+
+class Message(models.Model):
+    chat = models.ForeignKey(Chat, on_delete=models.CASCADE, verbose_name='Чат')
+    message = models.TextField('Сообщение')
+    created_at = models.DateTimeField('Дата и время сообщения')
+
+    def __str__(self):
+        return self.chat_id
+
+    def get_absolute_url(self):
+        return f'/avtoschool/{self.id}'
+
+    class Meta:
+        verbose_name = 'Сообщение'
+        verbose_name_plural = 'Сообщение'
 
 
 class DrivingCard(models.Model):
@@ -87,9 +117,9 @@ class Tranport(models.Model):
 
 
 class Trvperiod(models.Model):
-    fioUch = models.ForeignKey(Ucheniki, on_delete=models.PROTECT, verbose_name='Фио сотрудника')
+    fioUch = models.ForeignKey(Ucheniki, on_delete=models.PROTECT, verbose_name='Фио ученика')
     fioSotr = models.ForeignKey(Sotrudniki, on_delete=models.PROTECT, verbose_name='Фио сотрудника')
-    gosnomer = models.ForeignKey(Tranport, on_delete=models.PROTECT, verbose_name='Фио сотрудника')
+    gosnomer = models.ForeignKey(Tranport, on_delete=models.PROTECT, verbose_name='Госномер')
 
     def __str__(self):
         return self.gosnomer

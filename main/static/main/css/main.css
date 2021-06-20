@@ -175,12 +175,6 @@ a.download:hover {
     text-decoration: underline !important;
 }
 
-.date-range {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: -15px;
-    color: #666
-}
 
 .cd-schedule__top-info {
     font-size: 15px;
@@ -359,4 +353,50 @@ a.download:hover {
 
 #tel::placeholder {
     color: #808080;
+}
+
+input[type=file] {
+    outline: 0;
+    opacity: 0;
+    /*pointer-events: none;*/
+    user-select: none;
+    width: 0;
+}
+
+.schedule-dates input[type=button] {
+    outline: 0;
+    opacity: 0;
+    /*pointer-events: none;*/
+    user-select: none;
+    width: 0;
+}
+
+label[for=doc] {
+    padding: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.schedule-dates {
+    margin-top: 30px;
+    margin-bottom: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.date-range {
+    text-align: center;
+    color: #666
+}
+
+.schedule-dates input {
+    height: 5px;
+    width: 1px;
+}
+
+.schedule-dates label {
+    width: 50px;
+    height: 35px;
 }

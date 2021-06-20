@@ -27,57 +27,13 @@
                     <td>{{ el.date_rogd }}</td>
                     <td>{{ el.address }}</td>
                     <td>30.04.2021</td>
-                    <td>22.5</td>
+                    <td>42.5</td>
                     <td class="text-success">Сдан</td>
                     <td class="text-danger">Не сдан</td>
                 </tr>
             {% endfor %}
         {% endif %}
-        <tr class="student-line" aria-hidden="true" data-toggle="modal" data-target="#studentModal">
-            <td>Власов Вячеслав Алексеевич</td>
-            <td>31.10.1999</td>
-            <td>ул. Орджоникидзе 30, кв 36</td>
-            <td>30.04.2021</td>
-            <td>22.5</td>
-            <td class="text-success">Сдан</td>
-            <td class="text-danger">Не сдан</td>
-        </tr>
-        <tr class="student-line">
-            <td>Корнеев Максим Сергеевич</td>
-            <td>18.08.1999</td>
-            <td>ул. Юбилейная 56, кв 36</td>
-            <td>10.05.2021</td>
-            <td>33</td>
-            <td class="text-success">Сдан</td>
-            <td class="text-danger">Не сдан</td>
-        </tr>
-        <tr class="student-line">
-            <td>Халабуда Олег Дмитриевич</td>
-            <td>10.12.1998</td>
-            <td>ул. Орджоникидзе 30, кв 36</td>
-            <td>05.05.2021</td>
-            <td>30</td>
-            <td class="text-danger">Не сдан</td>
-            <td class="text-danger">Не сдан</td>
-        </tr>
-        <tr class="student-line">
-            <td>Кичева Дарья Андреевна</td>
-            <td>06.10.1999</td>
-            <td>ул. Лебедева 15, кв 66</td>
-            <td>10.05.2021</td>
-            <td>34.5</td>
-            <td class="text-danger">Не сдан</td>
-            <td class="text-danger">Не сдан</td>
-        </tr>
-        <tr class="student-line">
-            <td>Дегтев Андрей Андреевич</td>
-            <td>29.12.1999</td>
-            <td>ул. Морской 20, кв 56</td>
-            <td>10.05.2021</td>
-            <td>34.5</td>
-            <td class="text-danger">Не сдан</td>
-            <td class="text-danger">Не сдан</td>
-        </tr>
+
     </table>
 
     <div class="modal fade" id="studentModal" tabindex="-1" role="dialog" aria-labelledby="studentModal"
@@ -115,8 +71,9 @@
                         <tr>
                             <td class="text-success">Сдан</td>
                             <td class="text-danger">Не сдан</td>
-                            <td class="text-danger">Не сдан</td>
-                            <td class="text-danger">Не сдан</td>
+                            <td class="text-warning">Ожидает сдачи</td>
+                            <td class="text-warning">Ожидает сдачи</td>
+
                         </tr>
                         <tr>
                     </table>

@@ -7,6 +7,7 @@ from .models import Sotrudniki
 from .models import Rasp_teor
 from .models import Zurnal
 from .models import PosZurnal
+from .models import Group
 
 
 admin.site.register(Ucheniki)
@@ -22,3 +23,5 @@ admin.site.register(Rasp_teor)
 admin.site.register(Zurnal)
 
 admin.site.register(PosZurnal)
+
+admin.site.register(Group)

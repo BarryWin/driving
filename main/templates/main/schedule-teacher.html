@@ -5,7 +5,31 @@
 
 {% block content %}
     <h2 class="page-title">Расписание</h2>
-    <h4 class="date-range">24 Май 2021 - 29 Май 2021</h4>
+    <div class="colors-map">
+        <div style="margin-right: 20px;" class="colors-left">
+            <div class="color-item"><span style="background: #4fab54" class="color"></span> &ndash; Время практического
+                занятия с учеником
+            </div>
+            <div class="color-item"><span style="background: #bebebe" class="color"></span> &ndash; Свободное время для
+                назначения ученику практического занятия
+            </div>
+        </div>
+    </div>
+    <div class="schedule-dates">
+        <h4 class="date-range">24 Май 2021 - 29 Май 2021</h4>
+        <form method="get" class="ml-3">
+            <label class="btn btn-secondary" style="cursor: pointer" for="dateback"><i style="font-size: 17px"
+                                                                                       class="fa fa-arrow-left"
+                                                                                       aria-hidden="true"></i><input
+                    id="dateback" type="button" class="d-none"></label>
+            <label class="btn btn-secondary" style="cursor: pointer" for="dateforth"><input id="dateforth"
+                                                                                            type="button"
+                                                                                            class="d-none"><i
+                    style="font-size: 17px"
+                    class="fa fa-arrow-right"
+                    aria-hidden="true"></i></label>
+        </form>
+    </div>
     {#    <iframe src="https://calendar.google.com/calendar/embed?src=b9f017pol0i40pkmjo3u9bjv70%40group.calendar.google.com&ctz=Europe%2FMoscow"#}
     {#            style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>#}
     <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
@@ -39,7 +63,8 @@
 
                     <ul>
                         <li class="cd-schedule__event">
-                            <a data-start="09:00" data-end="10:30" data-content="{% static 'main/event-teacher-lesson' %}"
+                            <a data-start="09:00" data-end="10:30"
+                               data-content="{% static 'main/event-teacher-lesson' %}"
                                data-event="event-1"
                                href="#0">
                                 <em class="cd-schedule__name">Практическое занятие</em>
@@ -50,21 +75,24 @@
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="10:30" data-end="12:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="10:30" data-end="12:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="12:00" data-end="13:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="12:00" data-end="13:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="13:30" data-end="15:00" data-content="{% static 'main/event-teacher-lesson' %}"
+                            <a data-start="13:30" data-end="15:00"
+                               data-content="{% static 'main/event-teacher-lesson' %}"
                                data-event="event-1"
                                href="#0">
                                 <em class="cd-schedule__name">Практическое занятие</em>
@@ -74,21 +102,24 @@
                             </a>
 
                         <li class="cd-schedule__event">
-                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="15:00" data-end="16:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="16:30" data-end="18:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="16:30" data-end="18:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="18:00" data-end="19:30" data-content="{% static 'main/event-teacher-lesson' %}"
+                            <a data-start="18:00" data-end="19:30"
+                               data-content="{% static 'main/event-teacher-lesson' %}"
                                data-event="event-1"
                                href="#0">
                                 <em class="cd-schedule__name">Практическое занятие</em>
@@ -97,7 +128,8 @@
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="19:30" data-end="21:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="19:30" data-end="21:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
@@ -118,14 +150,16 @@
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="10:30" data-end="12:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="10:30" data-end="12:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="12:00" data-end="13:30" data-content="{% static 'main/event-teacher-lesson' %}"
+                            <a data-start="12:00" data-end="13:30"
+                               data-content="{% static 'main/event-teacher-lesson' %}"
                                data-event="event-1"
                                href="#0">
                                 <em class="cd-schedule__name">Практическое занятие</em>
@@ -134,7 +168,8 @@
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="13:30" data-end="15:00" data-content="{% static 'main/event-teacher-lesson' %}"
+                            <a data-start="13:30" data-end="15:00"
+                               data-content="{% static 'main/event-teacher-lesson' %}"
                                data-event="event-1"
                                href="#0">
                                 <em class="cd-schedule__name">Практическое занятие</em>
@@ -143,28 +178,32 @@
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="15:00" data-end="16:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="16:30" data-end="18:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="16:30" data-end="18:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="18:00" data-end="19:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="18:00" data-end="19:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="19:30" data-end="21:00" data-content="{% static 'main/event-teacher-lesson' %}"
+                            <a data-start="19:30" data-end="21:00"
+                               data-content="{% static 'main/event-teacher-lesson' %}"
                                data-event="event-1"
                                href="#0">
                                 <em class="cd-schedule__name">Практическое занятие</em>
@@ -180,7 +219,8 @@
 
                     <ul>
                         <li class="cd-schedule__event">
-                            <a data-start="9:00" data-end="10:30" data-content="{% static 'main/event-teacher-lesson' %}"
+                            <a data-start="9:00" data-end="10:30"
+                               data-content="{% static 'main/event-teacher-lesson' %}"
                                data-event="event-1"
                                href="#0">
                                 <em class="cd-schedule__name">Практическое занятие</em>
@@ -189,35 +229,40 @@
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="10:30" data-end="12:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="10:30" data-end="12:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="12:00" data-end="13:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="12:00" data-end="13:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="13:30" data-end="15:00" data-content="{% static 'main/event-teacher-empty' %}" data-event="event-2"
+                            <a data-start="13:30" data-end="15:00"
+                               data-content="{% static 'main/event-teacher-empty' %}" data-event="event-2"
                                href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="15:00" data-end="16:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="16:30" data-end="18:00" data-content="{% static 'main/event-teacher-lesson' %}"
+                            <a data-start="16:30" data-end="18:00"
+                               data-content="{% static 'main/event-teacher-lesson' %}"
                                data-event="event-1"
                                href="#0">
                                 <em class="cd-schedule__name">Практическое занятие</em>
@@ -226,14 +271,16 @@
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="18:00" data-end="19:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="18:00" data-end="19:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="19:30" data-end="21:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="19:30" data-end="21:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
@@ -247,7 +294,8 @@
 
                     <ul>
                         <li class="cd-schedule__event">
-                            <a data-start="9:00" data-end="10:30" data-content="{% static 'main/event-teacher-lesson' %}"
+                            <a data-start="9:00" data-end="10:30"
+                               data-content="{% static 'main/event-teacher-lesson' %}"
                                data-event="event-1"
                                href="#0">
                                 <em class="cd-schedule__name">Практическое занятие</em>
@@ -256,49 +304,56 @@
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="10:30" data-end="12:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="10:30" data-end="12:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="12:00" data-end="13:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="12:00" data-end="13:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="13:30" data-end="15:00" data-content="{% static 'main/event-teacher-empty' %}" data-event="event-2"
+                            <a data-start="13:30" data-end="15:00"
+                               data-content="{% static 'main/event-teacher-empty' %}" data-event="event-2"
                                href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="15:00" data-end="16:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="16:30" data-end="18:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="16:30" data-end="18:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="18:00" data-end="19:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="18:00" data-end="19:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="19:30" data-end="21:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="19:30" data-end="21:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
@@ -319,49 +374,56 @@
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="10:30" data-end="12:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="10:30" data-end="12:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="12:00" data-end="13:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="12:00" data-end="13:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="13:30" data-end="15:00" data-content="{% static 'main/event-teacher-empty' %}" data-event="event-2"
+                            <a data-start="13:30" data-end="15:00"
+                               data-content="{% static 'main/event-teacher-empty' %}" data-event="event-2"
                                href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="15:00" data-end="16:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="16:30" data-end="18:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="16:30" data-end="18:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="18:00" data-end="19:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="18:00" data-end="19:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="19:30" data-end="21:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="19:30" data-end="21:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
@@ -381,28 +443,32 @@
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="10:30" data-end="12:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="10:30" data-end="12:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="12:00" data-end="13:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="12:00" data-end="13:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="13:30" data-end="15:00" data-content="{% static 'main/event-teacher-empty' %}" data-event="event-2"
-                               href="#0">
+                            <a data-start="13:30" data-end="15:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
+                               data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="15:00" data-end="16:30" data-content="{% static 'main/event-teacher-lesson' %}"
+                            <a data-start="15:00" data-end="16:30"
+                               data-content="{% static 'main/event-teacher-lesson' %}"
                                data-event="event-1"
                                href="#0">
                                 <em class="cd-schedule__name">Практическое занятие</em>
@@ -411,21 +477,24 @@
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="16:30" data-end="18:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="16:30" data-end="18:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="18:00" data-end="19:30" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="18:00" data-end="19:30"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
                         </li>
 
                         <li class="cd-schedule__event">
-                            <a data-start="19:30" data-end="21:00" data-content="{% static 'main/event-teacher-empty' %}"
+                            <a data-start="19:30" data-end="21:00"
+                               data-content="{% static 'main/event-teacher-empty' %}"
                                data-event="event-2" href="#0">
                                 <em class="cd-schedule__name">Незанятое время</em>
                             </a>
